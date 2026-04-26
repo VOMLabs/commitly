@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/jakob/projects/commitly/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

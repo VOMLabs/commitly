@@ -1,0 +1,5 @@
+/home/jakob/projects/commitly/build/CMakeFiles/commitly.dir
+/home/jakob/projects/commitly/build/CMakeFiles/edit_cache.dir
+/home/jakob/projects/commitly/build/CMakeFiles/rebuild_cache.dir
+/home/jakob/projects/commitly/build/CMakeFiles/commitly_autogen_timestamp_deps.dir
+/home/jakob/projects/commitly/build/CMakeFiles/commitly_autogen.dir
