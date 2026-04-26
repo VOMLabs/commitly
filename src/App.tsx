@@ -211,17 +211,6 @@ function App() {
     setSelectedFile(mockFiles[clampedIndex].name);
   }, []);
 
-  const minimizeWindow = () => appWindow.minimize();
-  const toggleMaximize = async () => {
-    const maximized = await appWindow.isMaximized();
-    if (maximized) {
-      await appWindow.unmaximize();
-    } else {
-      await appWindow.maximize();
-    }
-  };
-  const closeWindow = () => appWindow.close();
-
   useHotkey("ArrowDown", () => {
     if (activeTab === "changes") {
       navigateToFile(selectedIndex + 1);
@@ -362,13 +351,32 @@ function App() {
         </div>
 
         <div className="flex items-center title-bar-no-drag">
-          <button onClick={minimizeWindow} className="title-bar-btn w-10 h-10 flex items-center justify-center">
+          <button 
+            onClick={() => { console.log('minimize clicked'); appWindow.minimize(); }} 
+            className="title-bar-button"
+            title="Minimize"
+          >
             <MinusIcon className="w-4 h-4" />
           </button>
-          <button onClick={toggleMaximize} className="title-bar-btn w-10 h-10 flex items-center justify-center">
+          <button 
+            onClick={async () => { 
+              const maximized = await appWindow.isMaximized();
+              if (maximized) {
+                await appWindow.unmaximize();
+              } else {
+                await appWindow.maximize();
+              }
+            }} 
+            className="title-bar-button"
+            title="Maximize"
+          >
             <SquareIcon className="w-3.5 h-3.5" />
           </button>
-          <button onClick={closeWindow} className="title-bar-btn close w-10 h-10 flex items-center justify-center">
+          <button 
+            onClick={() => { console.log('close clicked'); appWindow.close(); }} 
+            className="title-bar-button close"
+            title="Close"
+          >
             <X className="w-4 h-4" />
           </button>
         </div>
