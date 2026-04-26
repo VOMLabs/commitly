@@ -1,6 +1,6 @@
 # Upgrading Dependencies
 
-This document outlines how we manage the dependencies that GitHub Desktop needs,
+This document outlines how we manage the dependencies that Commitly needs,
 as some need to be handled differently to others
 
 ## General Guidelines

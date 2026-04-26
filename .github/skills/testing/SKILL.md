@@ -1,16 +1,16 @@
 ---
 name: testing
 description: >-
-  Instructions for writing and maintaining tests in GitHub Desktop. Covers unit
+  Instructions for writing and maintaining tests in Commitly. Covers unit
   tests, UI component tests, and ad-hoc E2E tests. Use this skill when
   implementing features or bugfixes to write relevant tests, update existing
   tests, run the full suite to check for regressions, and produce screenshots
   and videos for Pull Request documentation.
 ---
 
-# Testing in GitHub Desktop
+# Testing in Commitly
 
-This document describes the three tiers of tests in GitHub Desktop, how to run
+This document describes the three tiers of tests in Commitly, how to run
 them, and the patterns you should follow when writing new tests or updating
 existing ones as part of a feature or bugfix.
 
@@ -566,7 +566,7 @@ await skipButton.click()
 const nameInput = page.locator('input[placeholder="Your Name"]')
 await nameInput.waitFor({ state: 'visible', timeout: 15000 })
 if ((await nameInput.inputValue()) === '') {
-  await nameInput.fill('GitHub Desktop E2E')
+  await nameInput.fill('Commitly E2E')
 }
 const emailInput = page.locator('input[placeholder="your-email@example.com"]')
 if ((await emailInput.inputValue()) === '') {

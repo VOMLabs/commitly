@@ -1,6 +1,6 @@
-# GitHub Desktop - Copilot Instructions
+# Commitly - Copilot Instructions
 
-This repository contains GitHub Desktop, an open-source Electron-based GitHub application written in TypeScript and React.
+This repository contains Commitly, an open-source Electron-based GitHub application written in TypeScript and React.
 
 ## Technology Stack
 
@@ -14,7 +14,7 @@ This repository contains GitHub Desktop, an open-source Electron-based GitHub ap
 
 ## Code Style & Conventions
 
-GitHub Desktop has been developed for many years through many iterations of technologies and coding styles, there may be conflicting styles in different parts of the codebase. When contributing new code or refactoring existing code, please follow the conventions outlined below.
+Commitly has been developed for many years through many iterations of technologies and coding styles, there may be conflicting styles in different parts of the codebase. When contributing new code or refactoring existing code, please follow the conventions outlined below.
 
 ### TypeScript Style
 

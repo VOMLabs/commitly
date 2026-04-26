@@ -1,7 +1,7 @@
 /* eslint-disable no-sync */
 
 /**
- * Shared Playwright fixtures for GitHub Desktop e2e tests.
+ * Shared Playwright fixtures for Commitly e2e tests.
  *
  * Provides:
  *  - `app`  — the ElectronApplication instance

@@ -1,4 +1,4 @@
-# GitHub Desktop Release Notes Style Guide
+# Commitly Release Notes Style Guide
 
 ## Important: Use existing `Notes:` lines
 

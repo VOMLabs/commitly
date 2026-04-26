@@ -1,12 +1,12 @@
 ---
 name: update-git
-description: Walk through updating the version of Git shipped in GitHub Desktop. This is a multi-repo process spanning dugite-native, dugite, and desktop. Use this when asked to update Git, update Git for Windows, or bump the Git version.
+description: Walk through updating the version of Git shipped in Commitly. This is a multi-repo process spanning dugite-native, dugite, and desktop. Use this when asked to update Git, update Git for Windows, or bump the Git version.
 ---
 
-# Update Git Version in GitHub Desktop
+# Update Git Version in Commitly
 
-This skill guides the user through updating the version of Git that GitHub
-Desktop ships. This is a multi-repo cascade:
+This skill guides the user through updating the version of Git that Commitly
+ships. This is a multi-repo cascade:
 
 1. **desktop/dugite-native** — bundles Git binaries for each platform
 2. **desktop/dugite** — Node.js wrapper that consumes dugite-native releases

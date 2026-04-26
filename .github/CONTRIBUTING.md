@@ -1,13 +1,13 @@
-# Contributing to GitHub Desktop
+# Contributing to Commitly
 
 :+1: :tada: :sparkling_heart: Thanks for your interest! :sparkling_heart: :tada: :+1:
 
-The following is a set of guidelines for contributing to GitHub Desktop and its
+The following is a set of guidelines for contributing to Commitly and its
 related projects, which are hosted in the [Desktop organization](https://github.com/desktop)
 on GitHub. These are just guidelines, not rules. Use your best judgment, and
 feel free to propose changes to this document in a pull request.
 
-Note that GitHub Desktop is an evolving project, so expect things to change over
+Note that Commitly is an evolving project, so expect things to change over
 time as the team learns, listens and refines how we work with the community.
 
 #### Table Of Contents
@@ -45,7 +45,7 @@ how to contribute your feedback.
 
 ### Reporting Bugs
 
-This section guides you through submitting a bug report for GitHub Desktop.
+This section guides you through submitting a bug report for Commitly.
 Following these guidelines helps maintainers and the community understand your
 report :pencil:, reproduce the behavior :computer: :computer:, and find related
 reports :mag_right:.
@@ -66,7 +66,7 @@ comment to the existing issue if there is extra information you can contribute.
 
 Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/).
 
-Simply create an issue on the [GitHub Desktop issue tracker](https://github.com/desktop/desktop/issues/new?template=bug_report.yaml)
+Simply create an issue on the [Commitly issue tracker](https://github.com/desktop/desktop/issues/new?template=bug_report.yaml)
 and fill out the provided issue template.
 
 The information we are interested in includes:
@@ -79,7 +79,7 @@ The information we are interested in includes:
 ### Suggesting Enhancements
 
 This section guides you through submitting an enhancement suggestion for
-GitHub Desktop, including completely new features and minor improvements to
+Commitly, including completely new features and minor improvements to
 existing functionality. Following these guidelines helps maintainers and the
 community understand your suggestion :pencil: and find related suggestions
 :mag_right:.
@@ -101,7 +101,7 @@ information you would like to add.
 
 Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com/features/issues/).
 
-Simply create an issue on the [GitHub Desktop issue tracker](https://github.com/desktop/desktop/issues/new?template=feature_request.yaml)
+Simply create an issue on the [Commitly issue tracker](https://github.com/desktop/desktop/issues/new?template=feature_request.yaml)
 and fill out the provided issue template.
 
 Some additional advice:
@@ -110,16 +110,16 @@ Some additional advice:
 * **Provide a step-by-step description of the suggested enhancement**
   This additional context helps the maintainers understand the enhancement from
   your perspective
-* **Explain why this enhancement would be useful** to GitHub Desktop users
+* **Explain why this enhancement would be useful** to Commitly users
 * **Include screenshots and animated GIFs** if relevant to help you demonstrate
-  the steps or point out the part of GitHub Desktop which the suggestion is
+  the steps or point out the part of Commitly which the suggestion is
   related to. You can use [this tool](http://www.cockos.com/licecap/) to record
   GIFs on macOS and Windows
 * **List some other applications where this enhancement exists, if applicable**
 
 ### Help Wanted
 
-As part of building GitHub Desktop, we'll identify tasks that are good for
+As part of building Commitly, we'll identify tasks that are good for
 external contributors to pick up. These tasks:
 
  - have low impact, or have a known workaround

@@ -1,6 +1,6 @@
-# Custom ESLint rules for GitHub Desktop
+# Custom ESLint rules for Commitly
 
-This document outlines the rules we have added to the GitHub Desktop project and how to interact with them.
+This document outlines the rules we have added to the Commitly project and how to interact with them.
 
 ## About
 

@@ -197,7 +197,7 @@ function packageApp() {
       new RegExp('/\\.git($|/)'),
       new RegExp('/node_modules/\\.bin($|/)'),
     ],
-    appCopyright: `Copyright © ${new Date().getFullYear()} GitHub, Inc.`,
+    appCopyright: `Copyright © ${new Date().getFullYear()} Commitly`,
 
     // macOS
     appBundleId: getBundleID(),
@@ -517,7 +517,7 @@ function generateLicenseMetadata(outRoot: string) {
   )
 
   const licenseText = readFileSync(chooseALicenseLicense, 'utf8')
-  const licenseWithHeader = `GitHub Desktop uses licensing information provided by choosealicense.com.
+  const licenseWithHeader = `Commitly uses licensing information provided by choosealicense.com.
 
 The bundle in available-licenses.json has been generated from a source list provided at https://github.com/github/choosealicense.com, which is made available under the below license:
 

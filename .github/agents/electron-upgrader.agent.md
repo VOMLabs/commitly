@@ -1,11 +1,11 @@
 ---
 name: electron-upgrader
-description: Specialized agent for upgrading Electron and Node.js versions in GitHub Desktop with coordinated file updates
+description: Specialized agent for upgrading Electron and Node.js versions in Commitly with coordinated file updates
 ---
 
 # Electron Version Upgrade Agent
 
-This agent handles upgrading the Electron version in GitHub Desktop, along with the corresponding Node.js version update.
+This agent handles upgrading the Electron version in Commitly, along with the corresponding Node.js version update.
 
 ## Overview
 
