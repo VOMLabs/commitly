@@ -20,8 +20,12 @@ import {
   Upload,
   Download,
   ChevronRight,
+  Minus as MinusIcon,
+  X,
+  Square as SquareIcon,
 } from "lucide-react";
 import { useHotkey } from "@tanstack/react-hotkeys";
+import { getCurrentWindow } from "@tauri-apps/api/window";
 import "./App.css";
 
 interface FileItem {
@@ -194,6 +198,8 @@ function App() {
   const [selectedCommit, setSelectedCommit] = useState<CommitItem | null>(null);
   const [historyCommitDiff, setHistoryCommitDiff] = useState<DiffLine[]>([]);
 
+  const appWindow = getCurrentWindow();
+
   const filteredCommits = mockCommits.filter(c => 
     c.summary.toLowerCase().includes(historySearch.toLowerCase()) ||
     c.hash.includes(historySearch)
@@ -204,6 +210,17 @@ function App() {
     setSelectedIndex(clampedIndex);
     setSelectedFile(mockFiles[clampedIndex].name);
   }, []);
+
+  const minimizeWindow = () => appWindow.minimize();
+  const toggleMaximize = async () => {
+    const maximized = await appWindow.isMaximized();
+    if (maximized) {
+      await appWindow.unmaximize();
+    } else {
+      await appWindow.maximize();
+    }
+  };
+  const closeWindow = () => appWindow.close();
 
   useHotkey("ArrowDown", () => {
     if (activeTab === "changes") {
@@ -316,32 +333,43 @@ function App() {
   return (
     <div className="flex flex-col h-screen w-screen overflow-hidden">
       <nav
-        className="flex items-center justify-between h-12 px-4 border-b"
+        className="flex items-center justify-between h-10 px-3 border-b title-bar-drag"
         style={{ backgroundColor: "var(--color-sidebar)", borderColor: "var(--color-border)" }}
-        data-tauri-drag-region
       >
-        <div className="flex items-center gap-3">
-          <button className="flex items-center gap-2 px-3 py-1.5 rounded-md hover:bg-white/5 transition-colors">
+        <div className="flex items-center gap-2 title-bar-no-drag">
+          <button className="flex items-center gap-2 px-3 py-1 rounded-md hover:bg-white/5 transition-colors">
             <Database className="w-4 h-4" style={{ color: "var(--color-primary)" }} />
             <span className="text-sm font-medium">commitly</span>
             <GitBranch className="w-3 h-3 text-gray-500" />
           </button>
-          <button className="flex items-center gap-1.5 px-2 py-1.5 rounded-md hover:bg-white/5 transition-colors text-sm text-gray-400">
+          <button className="flex items-center gap-1.5 px-2 py-1 rounded-md hover:bg-white/5 transition-colors text-sm text-gray-400">
             <GitBranch className="w-3 h-3" />
             <span>main</span>
           </button>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-gray-500 flex items-center gap-1">
+        
+        <div className="flex items-center gap-1 title-bar-no-drag">
+          <span className="text-xs text-gray-500 flex items-center gap-1 pr-2">
             <Clock className="w-3 h-3" />
-            Last fetched: {lastFetched}
+            {lastFetched}
           </span>
           <button
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-md hover:bg-white/5 transition-colors text-sm"
+            className="flex items-center gap-1.5 px-2 py-1 rounded-md hover:bg-white/5 transition-colors text-sm"
             style={{ color: "var(--color-primary)" }}
           >
             <RefreshCcw className="w-3 h-3" />
-            Fetch origin
+          </button>
+        </div>
+
+        <div className="flex items-center title-bar-no-drag">
+          <button onClick={minimizeWindow} className="title-bar-btn w-10 h-10 flex items-center justify-center">
+            <MinusIcon className="w-4 h-4" />
+          </button>
+          <button onClick={toggleMaximize} className="title-bar-btn w-10 h-10 flex items-center justify-center">
+            <SquareIcon className="w-3.5 h-3.5" />
+          </button>
+          <button onClick={closeWindow} className="title-bar-btn close w-10 h-10 flex items-center justify-center">
+            <X className="w-4 h-4" />
           </button>
         </div>
       </nav>
