@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0d1117;
-  --color-sidebar: #161b22;
-  --color-border: #30363d;
+  --color-bg: #010101;
+  --color-sidebar: #121212;
+  --color-border: #1a1a1a;
   --color-primary: #1f6feb;
   --color-primary-hover: #388bfd;
   --color-added-bg: #1f3d1f;
@@ -58,4 +58,33 @@ input, textarea, button {
 
 .ai-pulse {
   animation: pulse-ai 1.5s ease-in-out infinite;
+}
+
+.transition-sidebar {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.transition-tab {
+  transition: all 0.15s ease;
+}
+
+.title-bar-drag {
+  -webkit-app-region: drag;
+}
+
+.title-bar-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.title-bar-btn {
+  -webkit-app-region: no-drag;
+  transition: background-color 0.1s ease;
+}
+
+.title-bar-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title-bar-btn.close:hover {
+  background-color: #e81123;
 }
