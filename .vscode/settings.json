@@ -43,6 +43,5 @@
     "editor.codeActionsOnSave": {
       "source.removeUnusedImports": "explicit"
     }
-  },
-  "cmake.sourceDirectory": "C:/Users/mateo/Documents/GitHub/VOMLabs/commitly/native"
+  }
 }
